@@ -1,0 +1,107 @@
+/* --- ส่วนพื้นฐาน --- */
+body {
+    font-family: 'Tahoma', 'Kanit', sans-serif;
+    background-color: #f1f8e9;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* --- หัวข้อและปุ่มสลับภาษา --- */
+.lang-switch { text-align: right; margin-bottom: 10px; }
+.lang-switch button { 
+    background: none; border: none; cursor: pointer; color: #2e7d32; font-weight: bold; 
+}
+
+.header h2 { color: #2e7d32; text-align: center; margin: 0; }
+.header p { color: #666; font-size: 0.85em; text-align: center; margin-bottom: 20px; }
+
+/* --- ส่วนกรอกข้อมูล (Auth & Add Food) --- */
+.input-section { 
+    background: #f9f9f9; 
+    padding: 15px; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #e8f5e9; 
+}
+
+.input-section h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #2e7d32;
+    text-align: center;
+}
+
+label { display: block; font-size: 0.85em; font-weight: bold; margin-bottom: 5px; color: #2e7d32; }
+
+input { 
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+/* --- ปุ่มต่างๆ --- */
+.add-btn { 
+    width: 100%; 
+    padding: 12px; 
+    color: rgb(24, 68, 20); 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+.add-btn:hover { opacity: 1; transform: translateY(-1px); }
+
+/* --- ส่วนแสดงผลรายการอาหาร --- */
+.item-card {
+    padding: 12px; 
+    border-radius: 10px; 
+    border-left: 6px solid;
+    margin-bottom: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    background: white;
+}
+
+/* สีแบ่งตามสถานะ */
+.fresh { border-left-color: #43a047; background: #e8f5e9; }
+.warning { border-left-color: #fb8c00; background: #fff3e0; }
+.expired { border-left-color: #e53935; background: #ffebee; }
+
+.item-info b { display: block; font-size: 1.05em; color: #333; }
+.item-info small { color: #666; font-size: 0.85em; }
+
+.delete-btn {
+    background: #ff5252; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 6px 10px; 
+    cursor: pointer; 
+    font-size: 0.8em; 
+}
+
+/* --- ส่วน User Session --- */
+#userDisplay {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 0.9em;
+}
